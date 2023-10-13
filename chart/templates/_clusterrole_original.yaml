@@ -15,7 +15,17 @@ rules:
   - certificates.k8s.io
   resources:
   - certificatesigningrequests
+  verbs:
+  - get
+  - create
+  - list
+  - delete
+  - deletecollection
+- apiGroups:
+  - certificates.k8s.io
+  resources:
   - certificatesigningrequests/approval
   - certificatesigningrequests/status
   verbs:
-  - '*'
+  - get
+  - update

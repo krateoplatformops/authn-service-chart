@@ -1,5 +1,7 @@
 
 podEnv:
+  - name: AUTHN_PORT
+    value: "8080"
   - name: AUTHN_DEBUG
     value: "true"
   - name: AUTHN_CERT_EXPIRES_IN

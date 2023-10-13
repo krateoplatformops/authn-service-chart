@@ -5,8 +5,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cluster-admin
-  #name:  {{ .Chart.Name }}
+  name:  {{ .Chart.Name }}
 subjects:
 - kind: ServiceAccount
   name: {{ .Chart.Name }}

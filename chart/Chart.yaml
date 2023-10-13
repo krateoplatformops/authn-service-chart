@@ -1,0 +1,8 @@
+apiVersion: v2
+name: authn-service
+description: Krateo PlatformOps AuthN Service
+type: application
+icon: "https://github.com/projectkerberus/kerberus-dashboard/blob/main/docs/media/square_black_logo.png"
+
+version: CHART_VERSION
+appVersion: APP_VERSION

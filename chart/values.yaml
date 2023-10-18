@@ -4,7 +4,11 @@ podEnv:
     value: "8080"
   - name: AUTHN_DEBUG
     value: "true"
-  - name: AUTHN_CERT_EXPIRES_IN
-    value: "8760h"
-  - name: AUTHN_TOKEN_EXPIRES_IN
-    value: "1h"
+  - name: AUTHN_KUBECONFIG_CLUSTER_NAME
+    value: "krateo"
+  - name: AUTHN_KUBECONFIG_CERT_EXPIRES_IN
+    value: "24h"
+  - name: AUTHN_KUBECONFIG_PROXY_URL
+    value: ""
+  - name: AUTHN_KUBECONFIG_CA_CERT
+    value: ""

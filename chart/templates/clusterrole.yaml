@@ -45,3 +45,21 @@ rules:
   - certificatesigningrequests/status
   verbs:
   - update
+# krateo basic.authn crd
+- apiGroups:
+  - basic.authn.krateo.io
+  resources:
+  - users
+  verbs:
+  - get
+  - list
+  - watch
+# krateo oauth.authn crd
+- apiGroups:
+  - oauth.authn.krateo.io
+  resources:
+  - githubconfigs
+  verbs:
+  - get
+  - list
+  - watch

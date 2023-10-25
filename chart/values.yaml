@@ -12,3 +12,4 @@ podEnv:
     value: ""
   - name: AUTHN_KUBECONFIG_CA_CERT
     value: ""
+

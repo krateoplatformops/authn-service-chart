@@ -63,3 +63,11 @@ rules:
   - get
   - list
   - watch
+- apiGroups:
+  - ldap.authn.krateo.io
+  resources:
+  - ldapconfigs
+  verbs:
+  - get
+  - list
+  - watch

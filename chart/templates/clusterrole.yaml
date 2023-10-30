@@ -63,6 +63,7 @@ rules:
   - get
   - list
   - watch
+# LDAP crd
 - apiGroups:
   - ldap.authn.krateo.io
   resources:

@@ -37,9 +37,17 @@ spec:
             type: object
           spec:
             properties:
-              bindCredentials:
-                description: 'BindCredentials: specifies the password of the bind
-                  user not necessary if the LDAP server supports anonymous searches.'
+              baseDN:
+                description: 'BaseDN: specifies the base of the subtree in which the
+                  search is to be constrained.'
+                type: string
+              bindDN:
+                description: 'BindDN: specifies the username of the bind user not
+                  necessary if the LDAP server supports anonymous searches.'
+                type: string
+              bindSecret:
+                description: 'BindSecret: specifies the password of the bind user
+                  not necessary if the LDAP server supports anonymous searches.'
                 properties:
                   key:
                     description: The key to select.
@@ -55,20 +63,14 @@ spec:
                 - name
                 - namespace
                 type: object
-              bindDN:
-                description: 'BindDN: specifies the username of the bind user not
-                  necessary if the LDAP server supports anonymous searches.'
-                type: string
               dialURL:
                 description: 'DialURL: LDAP Server address.'
                 type: string
-              searchBaseDN:
-                description: 'SearchBaseDN: specifies the base of the subtree in which
-                  the search is to be constrained.'
-                type: string
+              tls:
+                type: boolean
             required:
+            - baseDN
             - dialURL
-            - searchBaseDN
             type: object
         required:
         - spec

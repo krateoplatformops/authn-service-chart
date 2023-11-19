@@ -1,15 +1,6 @@
-
-podEnv:
-  - name: AUTHN_PORT
-    value: "8080"
-  - name: AUTHN_DEBUG
-    value: "true"
-  - name: AUTHN_KUBECONFIG_CLUSTER_NAME
-    value: "krateo"
-  - name: AUTHN_KUBECONFIG_CERT_EXPIRES_IN
-    value: "24h"
-  - name: AUTHN_KUBECONFIG_PROXY_URL
-    value: ""
-  - name: AUTHN_KUBECONFIG_CA_CERT
-    value: ""
-
+AUTHN_PORT: "8080"
+AUTHN_DEBUG: "true"
+AUTHN_KUBECONFIG_CLUSTER_NAME: "krateo"
+AUTHN_KUBECONFIG_CERT_EXPIRES_IN: "24h"
+AUTHN_KUBECONFIG_PROXY_URL: "krateo-gateway"
+AUTHN_KUBECONFIG_CA_CERT: "/tmp/ca.crt"

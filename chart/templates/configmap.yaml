@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}
+  namespace: {{ .Release.Namespace }}
+data:
+  AUTHN_PORT: "{{ .Values.AUTHN_PORT }}"
+  AUTHN_DEBUG: "{{ .Values.AUTHN_DEBUG }}"
+  AUTHN_KUBECONFIG_CERT_EXPIRES_IN: {{ .Values.AUTHN_KUBECONFIG_CERT_EXPIRES_IN }}
+  AUTHN_KUBECONFIG_PROXY_URL: {{ .Values.AUTHN_KUBECONFIG_PROXY_URL }}.{{ .Release.Namespace }}.svc
+  AUTHN_KUBECONFIG_CA_CERT: {{ .Values.AUTHN_KUBECONFIG_CA_CERT }}

@@ -2,7 +2,6 @@ AUTHN_PORT: "8080"
 AUTHN_DEBUG: "true"
 AUTHN_KUBECONFIG_CLUSTER_NAME: "krateo"
 AUTHN_KUBECONFIG_CRT_EXPIRES_IN: "24h"
-AUTHN_KUBERNETES_URL: "https://krateo.io"
+AUTHN_KUBERNETES_URL: "https://kube-apiserver:6443"
 AUTHN_KUBECONFIG_PROXY_URL: "https://krateo-gateway.krateo-system.svc"
 AUTHN_KUBECONFIG_CACRT: "/tmp/ca.crt"
-

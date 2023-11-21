@@ -26,6 +26,9 @@ spec:
         env:
           {{- toYaml . | nindent 10 }}
         {{- end }}
+        envFrom:
+        - configMapRef:
+            name: {{ .Chart.Name }}
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: false

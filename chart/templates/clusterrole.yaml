@@ -11,6 +11,8 @@ rules:
   verbs:
   - get
   - list
+  - create
+  - update
 # allow creating, deleting and retrieving any CertificateSigningRequest
 - apiGroups:
   - certificates.k8s.io

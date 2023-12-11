@@ -24,8 +24,12 @@ spec:
         imagePullPolicy: IfNotPresent
         {{- with .Values.podEnv }}
         env:
-          {{- toYaml . | nindent 10 }}
+        {{- toYaml . | nindent 8 }}
         {{- end }}
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
         envFrom:
         - configMapRef:
             name: {{ .Chart.Name }}

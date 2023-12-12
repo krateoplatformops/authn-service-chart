@@ -22,14 +22,14 @@ spec:
       - name: {{ .Chart.Name }}
         image: ghcr.io/krateoplatformops/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
         imagePullPolicy: IfNotPresent
-        {{- with .Values.podEnv }}
         env:
-        {{- toYaml . | nindent 8 }}
-        {{- end }}
         - name: POD_NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
+        {{- with .Values.podEnv }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
         envFrom:
         - configMapRef:
             name: {{ .Chart.Name }}

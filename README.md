@@ -1,6 +1,6 @@
 # Krateo AuthN Service Helm Chart
 
-This is a [Helm Chart](https://helm.sh/docs/topics/charts/) for [Krateo](https://github.com/krateoplatformops/) AuthN Service.
+This is a [Helm Chart](https://helm.sh/docs/topics/charts/) for [Krateo AuthN Service](https://github.com/krateoplatformops/authn-service).
 
 ## How to install
 

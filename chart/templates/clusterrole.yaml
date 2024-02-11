@@ -1,7 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ .Chart.Name }}
+  name: {{ include "authn-service.fullname" . }}
+  labels:
+    {{- include "authn-service.labels" . | nindent 4 }}
 rules:
 - apiGroups:
   - ""

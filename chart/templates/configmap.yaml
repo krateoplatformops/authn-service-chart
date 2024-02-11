@@ -1,13 +1,16 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Chart.Name }}
-  namespace: {{ .Release.Namespace }}
+  name: {{ include "authn-service.fullname" . }}
+  labels:
+    {{- include "authn-service.labels" . | nindent 4 }}
 data:
-  AUTHN_PORT: "{{ .Values.AUTHN_PORT }}"
-  AUTHN_DEBUG: "{{ .Values.AUTHN_DEBUG }}"
-  AUTHN_KUBECONFIG_CLUSTER_NAME: "{{ .Values.AUTHN_KUBECONFIG_CLUSTER_NAME }}"
-  AUTHN_KUBECONFIG_CRT_EXPIRES_IN: {{ .Values.AUTHN_KUBECONFIG_CRT_EXPIRES_IN }}
-  AUTHN_KUBERNETES_URL: {{ .Values.AUTHN_KUBERNETES_URL }}
-  AUTHN_KUBECONFIG_PROXY_URL: {{ .Values.AUTHN_KUBECONFIG_PROXY_URL }}
-  AUTHN_KUBECONFIG_CACRT: {{ .Values.AUTHN_KUBECONFIG_CACRT }}
+  AUTHN_PORT: "{{ .Values.service.port }}"
+  AUTHN_DEBUG: "{{ .Values.env.AUTHN_DEBUG }}"
+  AUTHN_KUBECONFIG_CLUSTER_NAME: "{{ .Values.env.AUTHN_KUBECONFIG_CLUSTER_NAME }}"
+  AUTHN_KUBECONFIG_CRT_EXPIRES_IN: {{ .Values.env.AUTHN_KUBECONFIG_CRT_EXPIRES_IN }}
+  AUTHN_KUBERNETES_URL: {{ .Values.env.AUTHN_KUBERNETES_URL }}
+  AUTHN_KUBECONFIG_PROXY_URL: {{ .Values.env.AUTHN_KUBECONFIG_PROXY_URL }}
+  AUTHN_KUBECONFIG_CACRT: {{ .Values.env.AUTHN_KUBECONFIG_CACRT }}
+  AUTHN_STORE_NAMESPACE: {{ .Release.Namespace }}
+  POD_NAMESPACE: {{ .Release.Namespace }}

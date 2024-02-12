@@ -73,11 +73,11 @@ resources: {}
 
 livenessProbe:
   httpGet:
-    path: /
+    path: /health
     port: http
 readinessProbe:
   httpGet:
-    path: /
+    path: /health
     port: http
 
 autoscaling:
@@ -113,3 +113,4 @@ env:
   AUTHN_KUBERNETES_URL: "https://kube-apiserver:6443"
   AUTHN_KUBECONFIG_PROXY_URL: "https://krateo-gateway.krateo-system.svc:8443"
   AUTHN_KUBECONFIG_CACRT: "/tmp/ca.crt"
+  AUTHN_CORS: "true"

@@ -14,3 +14,4 @@ data:
   AUTHN_KUBECONFIG_CACRT: {{ .Values.env.AUTHN_KUBECONFIG_CACRT }}
   AUTHN_STORE_NAMESPACE: {{ .Release.Namespace }}
   POD_NAMESPACE: {{ .Release.Namespace }}
+  AUTHN_CORS: "{{ .Values.env.AUTHN_CORS }}"

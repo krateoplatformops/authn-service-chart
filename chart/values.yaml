@@ -114,3 +114,4 @@ env:
   AUTHN_KUBECONFIG_PROXY_URL: "https://krateo-gateway.krateo-system.svc:8443"
   AUTHN_KUBECONFIG_CACRT: "/tmp/ca.crt"
   AUTHN_CORS: "true"
+  AUTHN_DUMP_ENV: "false"

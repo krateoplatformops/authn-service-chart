@@ -15,3 +15,4 @@ data:
   AUTHN_STORE_NAMESPACE: {{ .Release.Namespace }}
   POD_NAMESPACE: {{ .Release.Namespace }}
   AUTHN_CORS: "{{ .Values.env.AUTHN_CORS }}"
+  AUTHN_DUMP_ENV: "{{ .Values.env.AUTHN_DUMP_ENV }}"

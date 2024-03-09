@@ -5,7 +5,7 @@ This is a [Helm Chart](https://helm.sh/docs/topics/charts/) for [Krateo AuthN Se
 ## How to install
 
 ```sh
-$ helm repo add krateo https://charts.krateo.io
-$ helm repo update krateo
-$ helm install authn-service krateo/authn-service
+helm repo add krateo https://charts.krateo.io
+helm repo update krateo
+helm install authn-service krateo/authn-service
 ```

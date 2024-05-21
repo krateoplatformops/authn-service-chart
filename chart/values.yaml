@@ -111,7 +111,5 @@ env:
   AUTHN_KUBECONFIG_CLUSTER_NAME: "krateo"
   AUTHN_KUBECONFIG_CRT_EXPIRES_IN: "24h"
   AUTHN_KUBERNETES_URL: "https://kube-apiserver:6443"
-  AUTHN_KUBECONFIG_PROXY_URL: "https://krateo-gateway.krateo-system.svc:8443"
-  AUTHN_KUBECONFIG_CACRT: "/tmp/ca.crt"
   AUTHN_CORS: "true"
   AUTHN_DUMP_ENV: "false"
